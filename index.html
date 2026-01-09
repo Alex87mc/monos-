@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonkeyRescue - Ayuda a los Monos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <section id="login-screen" class="login-container">
+        <div class="login-box">
+            <h1 class="logo-text">MonkeyRescue</h1>
+            <p class="subtitle">Inicia sesión para ayudar a cambiar vidas.</p>
+            
+            <form id="login-form">
+                <input type="text" placeholder="Teléfono, usuario o correo" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-login">
+                    <i class="fab fa-instagram"></i> Continuar con Instagram
+                </button>
+            </form>
+            
+            <div class="divider">
+                <span>O</span>
+            </div>
+            <p class="forgot-pass">¿Olvidaste tu contraseña?</p>
+        </div>
+        <div class="login-box signup-box">
+            <p>¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+        </div>
+    </section>
+
+    <section id="app-screen" class="app-container hidden">
+        <header class="navbar">
+            <div class="nav-content">
+                <span class="logo-text-small">MonkeyRescue</span>
+                <div class="nav-icons">
+                    <i class="fas fa-home"></i>
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-user-circle"></i>
+                </div>
+            </div>
+        </header>
+
+        <main class="feed">
+            <div class="post-card">
+                <div class="post-header">
+                    <div class="user-profile">
+                        <img src="https://placehold.co/40" alt="Avatar">
+                        <span>Refugio_Selva</span>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=1000&auto=format&fit=crop');"></div>
+                
+                <div class="post-content">
+                    <div class="actions">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <p><strong>Refugio_Selva</strong> Este pequeño capuchino fue rescatado del tráfico ilegal. Necesita medicina y alimentos especiales. 🐒❤️</p>
+                    <button class="btn-donate" onclick="donar('Capuchino')">Apoyar esta causa ($5.00)</button>
+                </div>
+            </div>
+
+            <div class="post-card">
+                <div class="post-header">
+                    <div class="user-profile">
+                        <img src="https://placehold.co/40" alt="Avatar">
+                        <span>Ayuda_Primates</span>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1527181152855-fc03fc7949c8?q=80&w=1000&auto=format&fit=crop');"></div>
+                
+                <div class="post-content">
+                    <p><strong>Ayuda_Primates</strong> Rescate en proceso. Estamos ampliando el hábitat para recibir a 3 monos araña. ¡Únete!</p>
+                    <button class="btn-donate" onclick="donar('Hábitat Mono Araña')">Donar materiales</button>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
